@@ -26,12 +26,9 @@
 # add fun colors if time allows
 
 import random
-#import string
-#from black import NewLine
 
 from pyparsing import WordStart
 words = []
-#words = [line.strip() for line in open('words.txt')]
 underscores = []
 guesses = [8]
 tries = 8
@@ -40,7 +37,6 @@ end_game = False
 name = input("What shall I call you? ")
 print("Good luck", name, "and have fun!")
 print("Guess the Mystery Word")
-# for some reason this personable feature broke the game and won't allow me to quit. Come back to this.
 
 with open('words.txt') as file:
     # why can't i link this to test-word??
@@ -93,7 +89,7 @@ with open('words.txt') as file:
     print(underscores)
     user_input = input('Guess again... ')
 
-    # while user_input != 'Quit' and end_game == False:
+while user_input != 'Quit' and end_game == False:
         # how can I standize the user input so that no matter what is entered the game stops
 # if the user guesses beyond the given amount of tries then set end_game to true
 # figure out how to let the user know they've already guessed a letter
